@@ -43,6 +43,28 @@ pip install -e . 		# install in editable mode
 bash batch/job_template.sh 	# batch run
 ```
 
+### Installation with Pixi
+
+[Pixi](https://pixi.sh) is a fast package manager built on top of conda. To use risk-slim with pixi:
+
+```bash
+git clone https://github.com/ustunb/risk-slim
+cd risk-slim
+pixi install          # install dependencies
+pixi run install      # install risk-slim in editable mode
+pixi run test         # run batch test
+```
+
+Or run commands directly in the pixi environment:
+
+```bash
+pixi shell            # activate the environment
+pip install -e .      # install risk-slim in editable mode
+bash batch/job_template.sh  # batch run
+```
+
+**Note:** CPLEX must be installed separately. See [CPLEX installation instructions](/docs/cplex_instructions.md).
+
 ### Requirements
 
 risk-slim requires Python 3.5+ and CPLEX 12.6+. For instructions on how to download and install, click [here](/docs/cplex_instructions.md). 
