@@ -101,3 +101,7 @@ target/
 
 # Jupyter NB Checkpoints
 .ipynb_checkpoints/
+
+# Pixi
+.pixi/
+pixi.lock
