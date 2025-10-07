@@ -1,0 +1,24 @@
+[project]
+name = "risk-slim"
+version = "0.0.0"
+description = "optimized risk scores on large-scale datasets"
+authors = ["Berk Ustun <berk@seas.harvard.edu>"]
+channels = ["conda-forge"]
+platforms = ["linux-64", "osx-64", "osx-arm64", "win-64"]
+
+[dependencies]
+python = ">=3.5"
+numpy = "*"
+scipy = "*"
+cython = "*"
+ipython = "*"
+traitlets = "*"
+nose = "*"
+pandas = "*"
+prettytable = "*"
+# Note: cplex must be installed separately from IBM
+# See: https://github.com/ustunb/risk-slim/blob/master/docs/cplex_instructions.md
+
+[tasks]
+install = "pip install -e ."
+test = "bash batch/job_template.sh"
